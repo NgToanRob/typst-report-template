@@ -47,4 +47,7 @@ $ (x_1+x_2)^2 = x_1^2 + 2 x_1 x_2 + x_2^2 $ <eq:equation1>
 
 $ integral f(alpha+x)= sum beta $
 
+$ integral a+b $
+
 Подробнее можно прочитать здесь: https://typst.app/docs/reference/math/equation 
+

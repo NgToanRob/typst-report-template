@@ -20,17 +20,23 @@
   author-first-name: "Имя Отчество",
   author-last-name: "Фамилия",
   author-initials: "И.О.",
+
+  type-of-work: [Отчет по лабораторной работе №12\
+              по дисциплине\
+              _"Теория Автоматического Управления_"],
   title: "Длинное-длинное название диссертации из достаточно большого количества сложных и непонятных слов",
   udk: "xxx.xxx", // Диссертация, УДК
   specialty-number: "XX.XX.XX",
   specialty-title: "Название специальности",
   degree: "кандидата физико-математических наук",
   degree-short: "канд. физ.-мат. наук",
-  city: "Город",
+  city: "Санкт-Петербург",
   year: datetime.today().year(),
-  organization: [Федеральное государственное автономное образовательное учреждение высшего образования "Длинное название образовательного учреждения \ "АББРЕВИАТУРА"],
-  in-organization: "учреждении с длинным длинным длинным длинным названием, в котором выполнялась данная диссертационная работа", // в предложном падеже 
-  organization-short: "Сокращенное название организации",
+  organization: [МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ\
+РОССИЙСКОЙ ФЕДЕРАЦИИ],
+  university: [Федеральное государственное автономное образовательное учреждение высшего образования "Национальный исследовательский университет ИТМО" \ (Университет ИТМО)],
+  faculty: [Факультет систем управления и робототехники],
+  
   supervisor-first-name: "Имя Отчество",
   supervisor-last-name: "Фамилия",
   supervisor-initials: "И.О.",
@@ -141,37 +147,47 @@
   // титульный лист 
   set align(center)
   organization
-  v(2em)
-  table(
-    columns: (1fr,1fr),
-    stroke: none,
-    align: (left+bottom, right+bottom),
-    logo,
-    "На правах рукописи"
-  )
+  v(1em)
+  university
+  v(1em)
+  faculty
+  v(4em)
+
   set text(size:16pt)
-  v(1em)
-  author-name // ФИО автора 
-  v(1em)
-  [*#title*] // Название работы 
+  type-of-work
+  
+  // v(1em)
+  // author-name // ФИО автора 
+  // v(1em)
+  // [*#title*] // Название работы 
   set text(size:font-size)
   v(1em)
-  [Специальность #specialty-number -- ] // Номер специальности
+  // [Специальность #specialty-number -- ] // Номер специальности
   v(0em)
-  specialty-title // Название специальности
+  // specialty-title // Название специальности
   v(1em)
-  "Диссертация на соискание учёной степени"
+  // "Диссертация на соискание учёной степени"
   v(0em)
-  degree
+  // degree
   v(5fr)
   set align(right)
+  "Студент:"
+  v(0em)
+  "Группа R33372"
+  v(0em)
+  author-name
+  v(0.5em)
+
+
+
   "Научный руководитель:"
   v(0em)
-  supervisor-regalia 
+  // supervisor-regalia 
   v(0em)
   supervisor-name
   v(0em)
   set align(center)
+  logo
   [#city -- #year]
   set align(left)
   // конец титульной страницы
